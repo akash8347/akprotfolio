@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Alert1 from '@/app/Components1/Alert1';
 
-const page = () => {
+const Page = () => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [subject, setSubject] = useState('');
@@ -171,4 +171,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

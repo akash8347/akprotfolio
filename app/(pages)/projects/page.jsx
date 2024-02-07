@@ -6,7 +6,7 @@ import projdata from '@/app/lib/projdata'
 import SkelCard from '@/app/Components1/SkelCard'
 // import Loading from './loading'
 
-const page = () => {
+const Page = () => {
   let data;
 
   
@@ -47,4 +47,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

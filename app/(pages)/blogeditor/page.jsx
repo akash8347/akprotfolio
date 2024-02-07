@@ -36,7 +36,7 @@ const Page = () => {
       <div className="test flex justify-center items-center">
         <div className="test py-2 my-3 font-semibold flex items-center ">
           {`Hello ${session.user.name}`}<span className='ml-2'>
-            <Image className='h-7 w-7 rounded-3xl' src={session.user.image}
+            <Image alt='owner' className='h-7 w-7 rounded-3xl' src={session.user.image}
              height={100} width={100}/>
           </span>
           </div>
@@ -76,7 +76,7 @@ const Page = () => {
   } else if (status === "loading") {
     return <div className='min-h-screen flex justify-center items-center'><Spinner1/></div>  ;
   } else {
-    // Redirect to sign-in page if not authenticated
+    // Redirect to sign-in Page if not authenticated
     router.push("/api/auth/signin");
     return null; // Return null while redirecting
   }
