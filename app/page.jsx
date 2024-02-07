@@ -74,7 +74,7 @@ const handlex=()=>{
         <div className="left dark:bg-gray-800  flex-1  md:w-11/12 w-full md:flex-1 mb-5 lg:mb-0 lg:mx-10 lg:mt-10  ">
           <div className=" content flex flex-col mt-16 md:mt-5  ">
             <div className="name text-3xl font-semibold lg:text-5xl transition ease-in-out duration-300">
-              Hey,I am Akash Gohil
+              Hey&apos; I&apos;m Akash Gohil
             </div>
             <div className="para leading-relaxed mt-2 md:mt-9">
               <p className="font-medium text-xl md:text-2xl " >Full stack Engineer</p>
