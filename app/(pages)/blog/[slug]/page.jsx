@@ -9,7 +9,7 @@ export default function Page({ params }) {
   useEffect(() => {
     const fetchPostData = async () => {
       try {
-        const res = await fetch(`/api/blog/singlepost/${params.slug}`,{ cache: 'force-cache' });
+        const res = await fetch(`/api/blog/singlepost/${params.slug}`);
         if (!res.ok) {
           throw new Error('Failed to fetch post data');
         }
