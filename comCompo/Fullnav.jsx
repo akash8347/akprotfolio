@@ -46,7 +46,7 @@ export default function Fullnav() {
                             <Link href="/contact">Contact </Link>
                         </li>
                         <li>
-                            <Link href="/contact">Contact </Link>
+                            <Link href="/blogeditor">Blogeditor </Link>
                         </li>
                     </div>
 
