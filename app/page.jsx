@@ -105,7 +105,7 @@ const handlex=()=>{
           </div>
         </div>
 
-        <div className="right    flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-20 py-0 lg:py-20 ">
+        <div className="right    flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-15 py-0 lg:pt-7 ">
           <Image src="/download.svg" alt="akash" width={50} height={50} className="w-7/12 md:w-9/12 mx-auto" />
         </div>
       </main>
@@ -116,12 +116,12 @@ const handlex=()=>{
     
     ">
         <div className="  min-h-screen md:min-h-[500px]  mt-0 md:mt-0  about-container dis">
-          <div className="min-h-screen   md:min-h-[500px]  md:w-10/12 w-[90%] flex flex-col
-           lg:flex-row mx-auto  md:items-center  lg:pb-5 lg:justify-around justify-evenly lg:mx-auto">
+          <div className="min-h-screen    md:min-h-[500px]  md:w-9/12 w-[90%] flex flex-col
+           lg:flex-row mx-auto  md:items-center  lg:pb-5 lg:justify-between justify-evenly lg:mx-auto">
 
             {/* <!-- Part 1: Image of Me --> */}
 
-            <div className="flex md:justify-center md:items-center md:pr-20  min-w-1/2 md:flex-1 mx-auto">
+            <div className="flex  md:pl-20 md:items-center md:pr-5  min-w-1/2 md:w-[45%] mx-auto">
 
               <Image src="/logo.png" alt="Image of Me" width={600}
                 height={50} className="w-72 h-72 lg:w-80
@@ -129,7 +129,7 @@ const handlex=()=>{
 
             </div>
 
-            <div className="flex  bg-gradient-to-r   shadow-2xl 
+            <div className="flex   bg-gradient-to-r   shadow-2xl 
             md:min-h-32 min-h-0 md:max-h-52 max-h-72  text-center md:flex-1 md:items-center
           md:w-[80%] w-[99%]  md:justify-center  md:mx-auto  ">
 
