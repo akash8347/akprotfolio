@@ -74,7 +74,7 @@ const handlex=()=>{
      bg-white dark:bg-gray-800 flex-col  md:flex-row md:min-h-[500px]">
         <div className="left dark:bg-gray-800  flex-1  md:w-11/12 w-full md:flex-1 mb-5 lg:mb-0 lg:mx-10 lg:mt-10  ">
           <div className=" content flex flex-col mt-16 md:mt-5  ">
-            <div className="name text-3xl font-semibold lg:text-5xl transition ease-in-out duration-300">
+            <div className="name text-3xl  font-semibold lg:text-5xl   md:text-4xl transition ease-in-out duration-300">
               Hey&apos; I&apos;m Akash Gohil
             </div>
             <div className="para leading-relaxed mt-2 md:mt-9">
@@ -84,8 +84,8 @@ const handlex=()=>{
             </div>
             <div className="icons flex mt-5 ml-1 mb-4">
               {/* <FontAwesomeIcon className=" text-3xl" icon={faGithub}/> */}
-              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')} className="text-3xl mr-3" />
-              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className=" mx-3" style={{
+              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')} className="text-3xl mr-3 cursor-pointer" />
+              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className="cursor-pointer mx-3" style={{
                 fontSize: "2.050rem",
                 lineHeight: "2.25rem",
               }} />
