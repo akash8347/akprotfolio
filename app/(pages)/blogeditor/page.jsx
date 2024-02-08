@@ -31,6 +31,9 @@ const Page = () => {
         body: JSON.stringify({ title, value })
       });
       const data = await res.json();
+      if(data){
+        document.getElementById('span').innerHTML="form submitted successfully"
+      }
       console.log(data);
     } catch (error) {
       console.log(error)
