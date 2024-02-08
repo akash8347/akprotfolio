@@ -84,8 +84,8 @@ const handlex=()=>{
             </div>
             <div className="icons flex mt-5 ml-1 mb-4">
               {/* <FontAwesomeIcon className=" text-3xl" icon={faGithub}/> */}
-              <FaEnvelopeOpenText className="text-3xl mr-3" />
-              <FaLinkedin className=" mx-3" style={{
+              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')} className="text-3xl mr-3" />
+              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className=" mx-3" style={{
                 fontSize: "2.050rem",
                 lineHeight: "2.25rem",
               }} />
@@ -192,9 +192,9 @@ const handlex=()=>{
               <IoCallSharp className="mr-2" /> 91+ 9723996853
             </div>
             <div className="icons justify-center flex mt-5 ml-1 mb-10">
-              <FaGithub onClick={()=>router.push("https://github.com/akash8347")} className="text-white mr-10" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
-              <FaEnvelopeOpenText className="text-white mr-5" style={{ fontSize: "1.940rem", lineHeight: "2.25rem" }} />
-              <FaLinkedin className="text-white mx-5" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
+              <FaGithub onClick={()=>router.push("https://github.com/akash8347")} className="text-white mr-10 cursor-pointer" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
+              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')}  className="text-white mr-5 cursor-pointer" style={{ fontSize: "1.940rem", lineHeight: "2.25rem" }} />
+              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className="text-white mx-5 cursor-pointer" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
             </div>
           </div>
 

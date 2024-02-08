@@ -12,7 +12,7 @@ import Fade from '@/app/Components1/Fade';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Alert1 from '@/app/Components1/Alert1';
-
+import { useRouter } from 'next/navigation';
 const Page = () => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
@@ -20,6 +20,7 @@ const Page = () => {
   const [msg, setMsg] = useState('');
   const [pend, setpend] = useState(false)
   const [alert, setAlert] = useState(false);
+  const router=useRouter();
 
 
   const handleSubmit = async (e) => {
@@ -74,9 +75,9 @@ const Page = () => {
             <IoCallSharp className="mr-2" /> 91+ 9723996853
           </div>
           <div className="icons justify-center flex mt-5 ml-1 mb-10">
-            <FaGithub className="text-white mr-10" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
-            <FaEnvelopeOpenText className="text-white mr-5" style={{ fontSize: "1.940rem", lineHeight: "2.25rem" }} />
-            <FaLinkedin className="text-white mx-5" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
+          <FaGithub onClick={()=>router.push("https://github.com/akash8347")} className="text-white mr-10 cursor-pointer" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
+              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')}  className="text-white mr-5  cursor-pointer" style={{ fontSize: "1.940rem", lineHeight: "2.25rem" }} />
+              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className="text-white mx-5 cursor-pointer" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
           </div>
         </div>
 
