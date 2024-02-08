@@ -57,7 +57,7 @@ const Page = () => {
                                 </div>
                                 <hr className='h-5 mt-2 mb-1 py-0' />
                                 <div className="flex items-center mb-1">
-                                    <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3 " src="/akashvgohillogo.png" alt="Profile Image" />
+                                    <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3 " src="/logo.png" alt="Profile Image" />
                                     <div>
                                         <h2 className="text-base font-semibold">Akash Gohil</h2>
                                         <p className="text-gray-500 text-xs">Published on Feb 06, 2023</p>

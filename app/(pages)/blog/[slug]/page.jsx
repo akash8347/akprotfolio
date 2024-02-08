@@ -32,7 +32,7 @@ export default function Page({ params }) {
         </div>
         <hr className="mt-3 mb-3 w-[100%]" />
         <div className="flex justify-center items-center mt-5 md:mt-1 mb-4">
-          <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3" src="/akashvgohillogo.png" alt="Profile Image" />
+          <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3" src="/logo.png" alt="Profile Image" />
           <div>
             <h2 className="text-sm font-semibold">Akash Gohil</h2>
             <p className="text-gray-500 text-xs">Published on Feb 06, 2023</p>
