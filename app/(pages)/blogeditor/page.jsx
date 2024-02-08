@@ -68,7 +68,7 @@ const Page = () => {
         <form onSubmit={handleSubmit}>
           <input type="text" className='border border-purple-500 w-full py-3 px-3 mb-3 ' name="title" required placeholder='enter post main title' value={title} onChange={(e) => setTitle(e.target.value)} />
           <DynamicReactQuill theme="snow"  value={value} onChange={setValue} />
-          <span id='span'></span>
+          <div id='span'></div>
           <button className="text-purple-700 hover:text-white
                 border border-purple-700 hover:bg-purple-800 focus:ring-4
                 focus:outline-none focus:ring-purple-300 font-medium 
