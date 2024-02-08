@@ -18,15 +18,24 @@ const Page = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch("/api/blog/posts", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ title, value })
-    });
-    const data = await res.json();
-    console.log(data);
+    if(value.length<=100){
+      document.getElementById('span').innerHTML="blog post must be hundred charachters long"
+      return
+    }
+    try {
+      const res = await fetch("/api/blog/posts", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title, value })
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error)
+    }
+   
   }
 
   if (status === "authenticated") {
@@ -57,8 +66,9 @@ const Page = () => {
       </div>
       <div className="text  w-full">
         <form onSubmit={handleSubmit}>
-          <input type="text" className='border border-purple-500 w-full py-3 px-3 mb-3 ' name="title" placeholder='enter post main title' value={title} onChange={(e) => setTitle(e.target.value)} />
+          <input type="text" className='border border-purple-500 w-full py-3 px-3 mb-3 ' name="title" required placeholder='enter post main title' value={title} onChange={(e) => setTitle(e.target.value)} />
           <DynamicReactQuill theme="snow"  value={value} onChange={setValue} />
+          <span id='span'></span>
           <button className="text-purple-700 hover:text-white
                 border border-purple-700 hover:bg-purple-800 focus:ring-4
                 focus:outline-none focus:ring-purple-300 font-medium 
