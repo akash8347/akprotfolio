@@ -22,9 +22,10 @@ import MyTabs from "./Components1/MyTabs";
 import data from "./lib/projdata";
 import Spinner1 from '@/app/Components1/Spinner1';
 import React, { useState } from 'react'
-
+import {useRouter} from "next/navigation";
 
 export default function Home() {
+  const router=useRouter()
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [subject, setSubject] = useState('');
@@ -191,7 +192,7 @@ const handlex=()=>{
               <IoCallSharp className="mr-2" /> 91+ 9723996853
             </div>
             <div className="icons justify-center flex mt-5 ml-1 mb-10">
-              <FaGithub className="text-white mr-10" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
+              <FaGithub onClick={()=>router.push("https://github.com/akash8347")} className="text-white mr-10" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
               <FaEnvelopeOpenText className="text-white mr-5" style={{ fontSize: "1.940rem", lineHeight: "2.25rem" }} />
               <FaLinkedin className="text-white mx-5" style={{ fontSize: "2.050rem", lineHeight: "2.25rem" }} />
             </div>
