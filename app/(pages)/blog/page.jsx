@@ -14,7 +14,7 @@ const Page = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("/api/blog/getposts", {
+                const res = await fetch("/api/blog/getposts",{ cache: 'no-store' }, {
                     method: 'GET',
                 });
 
