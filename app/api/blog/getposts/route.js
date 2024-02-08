@@ -14,3 +14,4 @@ export async function GET(request) {
         return Response.json({ error: "An error occurred while fetching posts" });
     }
 }
+export const dynamic = 'force-dynamic' 
