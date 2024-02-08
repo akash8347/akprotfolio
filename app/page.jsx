@@ -157,7 +157,7 @@ const handlex=()=>{
             <p className="para text-base md:text-base md:mt-3">Here is All of my projects </p>
           </div>
           <div className="test   ">
-            <Link href="#" className="text-lg   ">See all {'->'}</Link>
+            <Link href="/projects" className="text-lg   ">See all {'->'}</Link>
           </div>
         </div>
 
