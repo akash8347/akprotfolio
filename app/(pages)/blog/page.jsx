@@ -14,7 +14,7 @@ const Page = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("/api/blog/getposts", { next: { revalidate: 1 } },{
+                const res = await fetch("/api/blog/getposts", {
                     method: 'GET',
                 });
 
