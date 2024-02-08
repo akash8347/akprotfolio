@@ -17,7 +17,7 @@ export default function Fullnav() {
     return (
         <>
             <nav className="bg-purple-500  h-14 lg:h-16  " >
-                <ul className="lg:bg-purple-500 bg-purple-500 h-14 lg:h-16  py-3 lg:items-center px-9 md:flex md:justify-between lg:pr-40 ">
+                <ul className="lg:bg-purple-500 bg-purple-500 h-14 lg:h-16  py-3 lg:items-center px-9 lg:flex lg:justify-between lg:pr-40 ">
                     <div className='LOGOMENU flex justify-between md:ml-20'>
                         <Link href="/">
                     <div className='IMAGE'>
@@ -26,12 +26,12 @@ export default function Fullnav() {
                                 width={35} className='rounded-3xl ' alt="my logo" />
                     </div>
                     </Link>
-                    <div className="MENU flex  items-center  md:hidden">
+                    <div className="MENU flex  items-center  lg:hidden">
                     <ThemeSwitcher/>
                         <Mynav />
                     </div>
                     </div>
-                    <div className='LINKS hidden md:flex  md:justify-center md:items-center sm:space-x-12 sm:font-medium sm:align-middle '>
+                    <div className='LINKS hidden lg:flex  lg:justify-center lg:items-center sm:space-x-12 sm:font-medium sm:align-middle '>
                         <li><ThemeSwitcher/></li>
                         <li>
                             <Link href="/about"> About me</Link>
@@ -41,6 +41,9 @@ export default function Fullnav() {
                         </li>
                         <li>
                             <Link href="/projects">Projects </Link>
+                        </li>
+                        <li>
+                            <Link href="/contact">Contact </Link>
                         </li>
                         <li>
                             <Link href="/contact">Contact </Link>
