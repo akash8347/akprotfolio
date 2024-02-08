@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 />
-<link rel="icon" href="/akashvgohillogo.png" sizes="any" />
+<link rel="icon" href="/logo.png" sizes="any" />
       <body className={`${inter.className} relative bg-white dark:bg-gray-800 dark:text-white`}>
         <Providers>
           <NextTopLoader color="red" height={2} showSpinner={false} />

@@ -18,7 +18,7 @@ const Page = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if(value.length<=500){
+    if(value.length<=5){
       document.getElementById('span').innerHTML="blog post must be hundred charachters long"
       return
     }

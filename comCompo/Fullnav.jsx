@@ -21,7 +21,7 @@ export default function Fullnav() {
                     <div className='LOGOMENU flex justify-between md:ml-20'>
                         <Link href="/">
                     <div className='IMAGE'>
-                            <Image src="/akashvgohillogo.png"
+                            <Image src="/logo.png"
                                 height={50}
                                 width={35} className='rounded-3xl ' alt="my logo" />
                     </div>
