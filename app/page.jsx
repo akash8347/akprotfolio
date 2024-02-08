@@ -100,7 +100,7 @@ const handlex=()=>{
                    dark:hover:text-white
                dark:hover:bg-purple-500 dark:focus:ring-purple-900 shadow-2xl
                transiction duration-300 ease-in-out mt-3
-               ">Explore my projects</button>
+               "  onClick={()=>router.push('/projects')}>Explore my projects</button>
             </div>
           </div>
         </div>
