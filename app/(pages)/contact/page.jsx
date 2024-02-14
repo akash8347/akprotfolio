@@ -63,6 +63,8 @@ const Page = () => {
   }
 
   return (
+    <>
+    <title>Contact me | Akash Gohil</title>
     <section id="contact" className="min-h-screen md:mt-10 mt-5 mb-5 md:mb-10 w-full">
       <div className="flex md:flex-row flex-col bg-gradient-to-r from-purple-500 via-indigo-600 rounded-2xl to-purple-700 items-center p-12 w-[90%] md:w-[80%] mx-auto px-3 md:px-10 justify-around md:justify-between">
 
@@ -169,6 +171,7 @@ const Page = () => {
 
       </div>
     </section>
+    </>
   )
 }
 

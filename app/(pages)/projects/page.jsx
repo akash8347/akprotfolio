@@ -5,6 +5,11 @@ import { Suspense } from 'react'
 import projdata from '@/app/lib/projdata'
 import SkelCard from '@/app/Components1/SkelCard'
 // import Loading from './loading'
+// import { Metadata } from 'next';
+ 
+export const metadata = {
+  title: 'Projects',
+};
 
 const Page = () => {
   let data;
@@ -17,6 +22,7 @@ const Page = () => {
 
   return (
     <>
+    {/* <title>Projects</title> */}
     <section className="SECTION-PROJECTS min-h-screen 
        w-[100%] mx-auto bg-white dark:bg-gray-800 md:w-11/12 md:mx-auto mt-5 md:mt-0 mb-10 md:mb-5">
 

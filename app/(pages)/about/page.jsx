@@ -7,7 +7,7 @@ const About = () => {
   return (
 
     <>
-    <title>mnj</title>
+    <title>About | Akash Gohil</title>
       <div className=" min-h-screen mt-3 md:mt-0  about-container dis">
         <div className="   min-h-screen md:w-10/12 w-[100%]  
        flex flex-col lg:flex-row mx-auto items-center 
@@ -20,7 +20,7 @@ const About = () => {
          mx-auto">
 
             <Image src="/logo.png" alt="Image of Me" width={600}
-              height={50} class="w-72 h-72 lg:w-80
+              height={50} className="w-72 h-72 lg:w-80
              lg:h-80  rounded-full shadow-lg "/>
 
           </div>

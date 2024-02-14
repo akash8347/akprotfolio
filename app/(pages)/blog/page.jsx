@@ -39,9 +39,15 @@ const Page = () => {
     };
 
     return (
-        loading ? ( <div className="h-screen w-full justify-center flex items-center"> <Spinner1/></div>  )
+        loading ? (
+        <> 
+        <title>blogs</title> 
+        <div className="h-screen w-full justify-center flex items-center"> 
+        <Spinner1/>
+        </div>
+        </>   )
        : (
-        
+        <><title>blogs | Akash Gohil</title>
             <div className='flex flex-col  w-[95%] md:w-[80%] min-h-screen mx-auto mt-5 mb-10'>
                 <h1 className="text-3xl text-center font-bold mt-10 mb-10">My blogs</h1>
                
@@ -69,6 +75,7 @@ const Page = () => {
                     ))}
                 </div>
             </div>
+            </>
         )
     );
 }

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Spinner1 from "@/app/Components1/Spinner1";
+import Head from "next/head";
 
 export default function Page({ params }) {
   const [postData, setPostData] = useState(null);
@@ -25,6 +26,8 @@ export default function Page({ params }) {
   }, [params.slug]);
 
   return (
+    <>
+    <title>{params.slug.replace(/-/g, ' ')}</title>
     <div className="min-h-screen mt-10 mx-auto w-[93%] md:w-[60%] ">
       <div className="heading">
         <div className="title font-semibold text-xl md:text-3xl  ">
@@ -49,5 +52,6 @@ export default function Page({ params }) {
   )}
 </div>
     </div>
+    </>
   );
 }

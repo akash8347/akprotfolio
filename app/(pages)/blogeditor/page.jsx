@@ -44,6 +44,7 @@ const Page = () => {
   if (status === "authenticated") {
     return (
       <>
+      <title>Blog Editor | Akash Gohil</title>
       <div className="test w-[95%] md:w-[60%] mx-auto min-h-screen">
       <div className="test flex justify-center items-center">
         <div className="test py-2 my-3 font-semibold flex items-center ">
