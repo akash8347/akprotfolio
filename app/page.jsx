@@ -123,7 +123,7 @@ const handlex=()=>{
 
             <div className="flex  md:pl-20 md:items-center md:pr-5  min-w-1/2 md:w-[45%] mx-auto">
 
-              <Image src="/logo.png" alt="Image of Me" width={600}
+              <Image src="/20240215_155825_0000.png" alt="Image of Me" width={600}
                 height={50} className="w-72 h-72 lg:w-80
              lg:h-80  rounded-full shadow-lg "/>
 
