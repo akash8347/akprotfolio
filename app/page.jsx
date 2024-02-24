@@ -276,7 +276,7 @@ const handlex=()=>{
                     className="hover:shadow-form rounded-md bg-[#6A64F1] py-2 px-5 text-base font-semibold text-white outline-none"
                  type="submit" >
                     {
-                      pend ? (<Spinner1 />) : ("sumbit") 
+                      pend ? (<Spinner1 />) : ("submit") 
                     }
 
                   </button>

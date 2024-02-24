@@ -28,7 +28,7 @@ const About = () => {
           <div className="flex text bg-gradient-to-r dark:text-gray-200  to-purple-700 shadow-2xl  min-h-0 md:min-h-40 text-center flex-1 items-center
           md:w-[80%] w-[90%]  justify-center  md:mx-auto mb-10 md:mb-0 md:py-10
           dark:bg-gradient-to-tl dark:from-purple-800 dark:via-violet-900 dark:to-purple-800
-          ">
+           rounded-lg ">
             <div className="flex   md:w-[90%] mx-3 md:mx-12 w-[100%]
           rounded md:mt-10 lg:mt-0  shadow-2xl">
               <Accord />

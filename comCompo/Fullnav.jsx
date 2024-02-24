@@ -1,4 +1,4 @@
-
+"use client"
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -9,11 +9,14 @@ import Image from 'next/image'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { ThemeSwitcher } from '@/app/Components1/ThemeSwitcher'
 
-
+import { usePathname,useRouter } from 'next/navigation'
 
 
 
 export default function Fullnav() {
+    const router=useRouter()
+    const path=usePathname()
+    console.log(path)
     return (
         <>
             <nav className="bg-purple-500  h-14 lg:h-16  " >
@@ -33,21 +36,19 @@ export default function Fullnav() {
                     </div>
                     <div className='LINKS hidden lg:flex  lg:justify-center lg:items-center sm:space-x-12 sm:font-medium sm:align-middle '>
                         <li><ThemeSwitcher/></li>
-                        <li>
+                        <li  className={path=="/about"?"    text-blue-800 dark:text-blue-800 bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
                             <Link href="/about"> About me</Link>
                         </li>
-                        <li>
+                        <li  className={path=="/blog"?"   text-blue-800 dark:text-blue-800  bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
                             <Link href="/blog"> Blogs</Link>
                         </li>
-                        <li>
+                        <li  className={path=="/projects"?"   text-blue-800 dark:text-blue-800 bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
                             <Link href="/projects">Projects </Link>
                         </li>
-                        <li>
+                        <li  className={path=="/contact"?"   text-blue-800 dark:text-blue-800  bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
                             <Link href="/contact">Contact </Link>
                         </li>
-                        <li>
-                            <Link href="/blogeditor">Blogeditor </Link>
-                        </li>
+                       
                     </div>
 
 

@@ -8,7 +8,7 @@ export default function Accord() {
   return (
     <Accordion  className="  ">
       <AccordionItem key="1" aria-label="Accordion 1"
-       title="My Introduction ?" className=" border-b-1   ">
+       title="My Introduction ?" className=" border-b-1 text-center   ">
         {defaultContent}
       </AccordionItem>
       <AccordionItem key="2" aria-label="Accordion 2" title="My skills ?"
