@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer'
 import connectDB from '@/app/lib/mongocon'
+import { resolve } from 'styled-jsx/css'
 const contact = require('@/app/lib/schemas/contact')
 export default async function handler(req, res) {
     const { mail, msg, name, subject } = req.body
@@ -23,6 +24,19 @@ export default async function handler(req, res) {
                 pass: 'kgse oncc wwzb vdsn'
             }
         })
+
+        await new Promise((resolve, reject) => {
+            // verify connection configuration
+            trasporter.verify(function (error, success) {
+                if (error) {
+                    console.log(error);
+                    reject(error);
+                } else {
+                    console.log("Server is ready to take our messages");
+                    resolve(success);
+                }
+            });
+        });
         const mailOptions = {
             from: 'akashgohil.av@gmail.com',
             to: "akashgohil.av@gmail.com",
@@ -30,16 +44,21 @@ export default async function handler(req, res) {
             text: `Name: ${name}\nEmail: ${mail}\nSubject: ${subject}Message: ${msg}`,
         }
         // const done = await trasporter.sendMail(mailOptions);
-        const done = trasporter.sendMail(mailOptions, function(err, data) {
-            if (err) {
-              console.log("Error " + err);
-            } else {
-                
-                    res.status(200).json({ massage: "contact form submitted and email send" })
-        
-                
-            }
-          });
+            await new Promise((resolve,reject)=>{
+                trasporter.sendMail(mailOptions, function(err, data) {
+                    if (err) {
+                      console.log("Error " + err);
+                      reject(err)
+                    } else {
+                        resolve(data)
+                            res.status(200).json({ massage: "contact form submitted and email send" })
+                            
+                        
+                    }
+                  });
+            })
+
+       
         // console.log("done "+done)
 
 
