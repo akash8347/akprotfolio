@@ -12,8 +12,8 @@ export default async function handler(req, res) {
         })
         const okay =await test.save();
         console.log("contact data from database: "+okay)
-        if(okay){
-            res.status(200).json({ massage: "contact form submitted" })
+        if(!okay){
+            res.status(500).json({ massage: "contact form not submitted" })
 
         }
         const trasporter = nodemailer.createTransport({
@@ -34,7 +34,10 @@ export default async function handler(req, res) {
             if (err) {
               console.log("Error " + err);
             } else {
-              console.log("Email sent successfully");
+                
+                    res.status(200).json({ massage: "contact form submitted and email send" })
+        
+                
             }
           });
         // console.log("done "+done)
