@@ -6,12 +6,12 @@ export default async function handler(req, res) {
     try {
         await connectDB()
 
-        console.log(req.body)
+        console.log("req.body : "+req.body)
         const test = new contact({
             msg, name, mail, subject
         })
         const okay =await test.save();
-        console.log(okay)
+        console.log("contact data from database: "+okay)
         if(okay){
             res.status(200).json({ massage: "contact form submitted" })
 
@@ -29,8 +29,15 @@ export default async function handler(req, res) {
             subject: 'New Message from Contact Form',
             text: `Name: ${name}\nEmail: ${mail}\nSubject: ${subject}Message: ${msg}`,
         }
-        const done = await trasporter.sendMail(mailOptions);
-        console.log(done)
+        // const done = await trasporter.sendMail(mailOptions);
+        const done = trasporter.sendMail(mailOptions, function(err, data) {
+            if (err) {
+              console.log("Error " + err);
+            } else {
+              console.log("Email sent successfully");
+            }
+          });
+        // console.log("done "+done)
 
 
 

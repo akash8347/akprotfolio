@@ -37,6 +37,12 @@ const Page = () => {
         const slug = truncatedTitle.replace(/\s+/g, '-');
         router.push(`/blog/${slug}`);
     };
+    function htmlToText(html) {
+        var temp = document.createElement("div");
+        temp.innerHTML = html;
+        return temp.textContent || temp.innerText || "";
+      }
+      
 
     return (
         loading ? (
@@ -58,7 +64,7 @@ const Page = () => {
                             <Link href={"blog/"+test.title.replace(/\s+/g, '-')}>
                             <div className="dark:bg-gray-900  mx-auto oversflow-hidden max-w-lg rounded-lg shadow-md border p-4">
                                 <div className='text-2xl mb-1 font-semibold truncate ...'>{test.title}</div>
-                                <div dangerouslySetInnerHTML={{ __html: test.content.substring(0, 100) + (test.content.length > 100 ? '...' : '') }} className="text-gray-700 dark:text-gray-300 mb-4 "></div>
+                                <div   className="text-gray-700 dark:text-gray-300 mb-4 ">{htmlToText(test.content.substring(0, 100)) + (test.content.length > 100 ? '...' : '') }</div>
                                 <div className="flex justify-end">
                                     <div  className="text-blue-500 font-semibold" onClick={() => handleClick(test.title)}>Read More</div>
                                 </div>
