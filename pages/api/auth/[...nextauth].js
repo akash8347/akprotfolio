@@ -10,7 +10,7 @@ const options = {
   ],
    callbacks:{
     async signIn({profile}){
-      if (user.email !== "akashgohil.av@gmail.com") {
+      if (profile.email !== "akashgohil.av@gmail.com") {
         // Reject the login attempt
         return Promise.reject("Only users with email 'ak@gmail.com' are allowed to log in.");
     }
