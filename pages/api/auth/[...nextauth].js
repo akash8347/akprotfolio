@@ -15,9 +15,9 @@ const options = {
         return false
     }
 
-      if(profile.email!="akashgohil.av@gmail.com".trim()){
-        return false
-      }
+      // if(profile.email!="akashgohil.av@gmail.com".trim()){
+      //   return false
+      // }
       return true
     }
   },
