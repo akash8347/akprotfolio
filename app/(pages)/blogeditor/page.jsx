@@ -18,8 +18,8 @@ const Page = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (value.length <= 5) {
-      document.getElementById('span').innerHTML = "blog post must be hundred charachters long"
+    if(value.length<=5){
+      document.getElementById('span').innerHTML="blog post must be hundred charachters long"
       return
     }
     try {
@@ -31,34 +31,31 @@ const Page = () => {
         body: JSON.stringify({ title, value })
       });
       const data = await res.json();
-      if (data) {
-        document.getElementById('span').innerHTML = "form submitted successfully"
+      if(data){
+        document.getElementById('span').innerHTML="form submitted successfully"
       }
       console.log(data);
     } catch (error) {
       console.log(error)
     }
-
+   
   }
 
   if (status === "authenticated") {
-    if (session.user.email == "akashgohil.av@gmail.com") {
+    return (
+      <>
+      <title>Blog Editor | Akash Gohil</title>
+      <div className="test w-[95%] md:w-[60%] mx-auto min-h-screen">
+      <div className="test flex justify-center items-center">
+        <div className="test py-2 my-3 font-semibold flex items-center ">
+          {`Hello ${session.user.name}`}<span className='ml-2'>
+            <Image alt='owner' className='h-7 w-7 rounded-3xl' src={session.user.image}
+             height={100} width={100}/>
+          </span>
+          </div>
 
-
-      return (
-        <>
-          <title>Blog Editor | Akash Gohil</title>
-          <div className="test w-[95%] md:w-[60%] mx-auto min-h-screen">
-            <div className="test flex justify-center items-center">
-              <div className="test py-2 my-3 font-semibold flex items-center ">
-                {`Hello ${session.user.name}`}<span className='ml-2'>
-                  <Image alt='owner' className='h-7 w-7 rounded-3xl' src={session.user.image}
-                    height={100} width={100} />
-                </span>
-              </div>
-
-              <div className="test  ">
-                <button className="text-purple-700 hover:text-white
+          <div className="test  ">
+          <button className="text-purple-700 hover:text-white
                 border border-purple-700 hover:bg-purple-800 focus:ring-4
                 focus:outline-none focus:ring-purple-300 font-medium 
                 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
@@ -67,16 +64,16 @@ const Page = () => {
                dark:hover:bg-purple-500 dark:focus:ring-purple-900 shadow-2xl
               ml-3 transiction duration-300 ease-in-out mt-3
                "
-                  onClick={() => signOut()}>Sign out</button>
+           onClick={() => signOut()}>Sign out</button>
 
-              </div>
-            </div>
-            <div className="text  w-full">
-              <form onSubmit={handleSubmit}>
-                <input type="text" className='border border-purple-500 w-full py-3 px-3 mb-3 ' name="title" required placeholder='enter post main title' value={title} onChange={(e) => setTitle(e.target.value)} />
-                <DynamicReactQuill theme="snow" value={value} onChange={setValue} />
-                <div id='span'></div>
-                <button className="text-purple-700 hover:text-white
+          </div>
+      </div>
+      <div className="text  w-full">
+        <form onSubmit={handleSubmit}>
+          <input type="text" className='border border-purple-500 w-full py-3 px-3 mb-3 ' name="title" required placeholder='enter post main title' value={title} onChange={(e) => setTitle(e.target.value)} />
+          <DynamicReactQuill theme="snow"  value={value} onChange={setValue} />
+          <div id='span'></div>
+          <button className="text-purple-700 hover:text-white
                 border border-purple-700 hover:bg-purple-800 focus:ring-4
                 focus:outline-none focus:ring-purple-300 font-medium 
                 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
@@ -85,23 +82,13 @@ const Page = () => {
                dark:hover:bg-purple-500 dark:focus:ring-purple-900 shadow-2xl
                transiction duration-300 ease-in-out mt-3
                " type="submit" value="Submit">submit</button>
-              </form>
-            </div>
-          </div>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <title>Blog Editor | Akash Gohil</title>
-          <div className="test w-[95%] md:w-[60%] mx-auto min-h-screen">
-            you are not akash gohil
-          </div>
-        </>
-      )
-    }
+        </form>
+        </div>
+        </div>
+      </>
+    );
   } else if (status === "loading") {
-    return <div className='min-h-screen flex justify-center items-center'><Spinner1 /></div>;
+    return <div className='min-h-screen flex justify-center items-center'><Spinner1/></div>  ;
   } else {
     // Redirect to sign-in Page if not authenticated
     router.push("/api/auth/signin");
