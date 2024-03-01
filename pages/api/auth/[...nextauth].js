@@ -8,6 +8,14 @@ const options = {
       clientSecret: process.env.GOOGLE_SECRET
     }),
   ],
+  callbacks:{
+    async signIn(profile){
+      if(profile.email!="akashgohil.av@gmail.com"){
+        return false
+      }
+      return true
+    }
+  },
   
   debug: false
 }
