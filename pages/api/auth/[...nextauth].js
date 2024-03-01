@@ -12,13 +12,13 @@ const options = {
     async signIn({profile}){
       if (profile.email !== "akashgohil.av@gmail.com") {
         // Reject the login attempt
-        return Promise.reject("Only users with email 'ak@gmail.com' are allowed to log in.");
+        return false
     }
 
       if(profile.email!="akashgohil.av@gmail.com".trim()){
         return false
       }
-      return Promise.resolve(true)
+      return true
     }
   },
   
