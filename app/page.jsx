@@ -130,7 +130,7 @@ const handlex=()=>{
             </div>
 
             <div className="flex   bg-gradient-to-r   shadow-2xl 
-            md:min-h-32 min-h-0 md:max-h-52 max-h-72  text-center md:flex-1 md:items-center
+            md:min-h-32 min-h-0   text-center md:flex-1 md:items-center
           md:w-[80%] w-[99%]  md:justify-center  md:mx-auto  ">
 
               <MyTabs />
