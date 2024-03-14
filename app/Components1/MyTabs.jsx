@@ -71,9 +71,9 @@ export default function MyTabs() {
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="relative rounded-md p-3 hover:bg-gray-100"
+                    className="relative rounded-md p-1 hover:bg-gray-100"
                   >
-                    <div dangerouslySetInnerHTML={{ __html: post.title }}  className="text-sm dark:text-black font-medium leading-5">
+                    <div dangerouslySetInnerHTML={{ __html: post.title }}  className="text-sm  dark:text-black font-medium leading-5">
                       
                     </div>
 
