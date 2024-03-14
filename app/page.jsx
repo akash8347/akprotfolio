@@ -77,7 +77,7 @@ const handlex=()=>{
             <div className="name text-2xl  font-semibold lg:text-4xl   md:text-3xl transition ease-in-out duration-300">
               Hey, I&apos;m Akash Gohil
             </div>
-            <div className="para leading-relaxed mt-2 md:mt-9">
+            <div className="para leading-relaxed mt-2 md:mt-4">
               <p className="font-medium text-xl md:text-2xl " >Full stack Engineer</p>
               <p className="font-normal mt-2 md:text-lg">I Love building Complex softwares.</p>
               <p className="font-normal leading-normal md:text-lg">I have an excellent problem solvings skills and i build softwares that solves real world problems. </p>
