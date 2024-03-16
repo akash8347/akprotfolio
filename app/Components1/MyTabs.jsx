@@ -10,8 +10,8 @@ export default function MyTabs() {
     Education: [
       {
         id: 1,
-        title: `<h1 style="font-size:0.9rem">I am currently pursuing post graduation in Masters in Computer aplication<h1>
-        <br> <div style="font-size:0.9rem"> I have done graduation in bachelor of Computer application </div> `,
+        title: `<h1 style="font-size:0.9rem">I am currently pursuing post graduation in Master of Computer Appication<h1>
+        <br> <div style="font-size:0.9rem"> I have done graduation in bachelor of Computer Application </div> `,
        
       }
       
@@ -29,7 +29,7 @@ export default function MyTabs() {
       {
         id: 1,
         title: `<div style="font-size:15px">&#128073 I love travelling as i travell a lot between college and Home &#128540 &#128652; <div>
-        <br><div style="font-size:15px">&#128073 I love eating street food as it is very yummy  <b>&#128523</b> </div>
+        <br><div style="font-size:15px">&#128073 I love eating street food. <b>&#128523</b> </div>
         `,
      
       }
