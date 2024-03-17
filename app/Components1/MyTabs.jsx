@@ -10,8 +10,8 @@ export default function MyTabs() {
     Education: [
       {
         id: 1,
-        title: `<h1 style="font-size:0.9rem">I am currently pursuing post graduation in Master of Computer Appication<h1>
-        <br> <div style="font-size:0.9rem"> I have done graduation in bachelor of Computer Application </div> `,
+        title: `<h1 style="font-size:0.9rem">I am currently pursuing post graduation in Master of Computer Application<h1>
+        <br> <div style="font-size:0.9rem"> I have done graduation in Bachelor of Computer Application </div> `,
        
       }
       
