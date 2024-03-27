@@ -105,7 +105,7 @@ const handlex=()=>{
           </div>
         </div>
 
-        <div className="right    flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-15 py-0 lg:pt-7 ">
+        <div className="right    flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-15 py-0 ">
           <Image src="/download.svg" alt="akash" width={50} height={50} className="w-7/12 md:w-9/12 mx-auto" />
         </div>
       </main>
