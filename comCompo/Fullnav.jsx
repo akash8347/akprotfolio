@@ -20,7 +20,7 @@ export default function Fullnav() {
     return (
         <>
             <nav className="bg-purple-500  h-14 lg:h-16  " >
-                <ul className="lg:bg-purple-500 bg-purple-500 h-14 lg:h-16  py-3 lg:items-center px-9 lg:flex lg:justify-between lg:pr-40 ">
+                <ul className="lg:bg-purple-500 bg-purple-600 h-14 lg:h-16  py-3 lg:items-center px-9 lg:flex lg:justify-between lg:pr-40 ">
                     <div className='LOGOMENU flex justify-between md:ml-20'>
                         <Link href="/">
                     <div className='IMAGE'>
