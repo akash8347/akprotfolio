@@ -69,7 +69,7 @@ const Page = () => {
       <div className="flex md:flex-row flex-col bg-gradient-to-r from-purple-500 via-indigo-600 rounded-2xl to-purple-700 items-center p-12 w-[90%] md:w-[80%] mx-auto px-3 md:px-10 justify-around md:justify-between">
 
         <div className="part1 md:min-h-[600px] text-center flex-1 md:w-[50%] mx-10 md:mx-0 md:justify-center">
-          <div className="text-4xl font-semibold mt-9 mb-10 md:mb-16">Contact me</div>
+          <div className="text-4xl font-semibold mt-14 mb-10 md:mb-16">Contact me</div>
           <div className="email text-lg mb-4 md:mb-10  flex justify-center items-center">
             <MdEmail className="mr-2" /> Akashgohil.av@gmail.com
           </div>
