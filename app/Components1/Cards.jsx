@@ -6,14 +6,14 @@ import { FaReact } from "react-icons/fa";
 const Cards = ({ data }) => {
   return (
     <div className="card-container md:mb-20 md:mt-10 mt-8 mb-8 ">
-      <div className="lg:max-w-2xl lg:min-w-72 max-w-2xl inline-block dark:bg-gray-900  rounded-lg   mx-auto  shadow-2xl lg:mx-auto flex-1 hover:">
-        <div className="image-cont w-full min-h-72 max-h-72 overflow-hidden">
+      <div className="lg:max-w-2x lg:min-w-20 max-w-2xl inline-block dark:bg-gray-900  rounded-lg   mx-auto  shadow-2xl lg:mx-auto flex-1 hover:">
+        <div className="image-cont w-[full] ">
           <Image
             className="border"
             src={`/${data.imgsrc}`}
             alt="Sunset in the mountains"
-            width={800}
-            height={100}
+            width={700}
+            height={500}
           />
         </div>
         <div className="px-5   ">
