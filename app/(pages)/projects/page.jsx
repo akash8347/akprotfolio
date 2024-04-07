@@ -39,7 +39,7 @@ const Page = () => {
         lg:flex-wrap justify-center  flex-wrap">
           {data.map((card) => (
             
-            <div key={card.id} className="lg:w-[40%] lg:max-w-xl mx-auto lg:mx-auto">  {/* mx-3 */}
+            <div key={card.id} className="lg:w-[36%] lg:max-w-xl mx-auto lg:mx-auto">  {/* mx-3 */}
     
               <Cards data={card} />
               
