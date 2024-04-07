@@ -7,6 +7,16 @@ const data = [{
     icon: ['SiMysql', 'FaReact'],
     niche: ['ReactJS', 'NodeJs', 'MySQL']
   },
+  {
+    id:2,
+      imgsrc: "port.png",
+      title: "portfolio website",
+      description: `My introduction website, used next 14, added blog section where 
+      all data comes from database. also added blog editor page where i used next-auth for authentication`,
+      icon: ['SiMysql', 'FaReact'],
+      niche: ['ReactJS', 'NodeJs', 'MySQL']
+    },
+
    
  
 

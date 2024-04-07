@@ -7,12 +7,12 @@ const Cards = ({ data }) => {
   return (
     <div className="card-container md:mb-20 md:mt-10 mt-8 mb-8 ">
       <div className="lg:max-w-2xl lg:min-w-72 max-w-2xl inline-block dark:bg-gray-900  rounded-lg   mx-auto  shadow-2xl lg:mx-auto flex-1 hover:">
-        <div className="image-cont w-full min-h-48 max-h-72 overflow-hidden">
+        <div className="image-cont w-full min-h-72 max-h-72 overflow-hidden">
           <Image
             className="border"
             src={`/${data.imgsrc}`}
             alt="Sunset in the mountains"
-            width={600}
+            width={800}
             height={100}
           />
         </div>
