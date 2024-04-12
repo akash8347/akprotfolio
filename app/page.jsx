@@ -78,9 +78,9 @@ const handlex=()=>{
               Hey, I&apos;m Akash Gohil
             </div>
             <div className="para leading-relaxed mt-2 md:mt-5">
-              <p className="font-medium text-xl md:text-2xl " >Full stack Engineer</p>
-              <p className="font-normal mt-2 md:text-md">I Like building Complex softwares.</p>
-              <p className="font-normal leading-normal md:text-md">I have an excellent problem solvings skills and i build softwares that solves real world problems. </p>
+              <p className="font-medium text-md md:text-2xl " >Full stack Engineer</p>
+              <p className="font-normal text-sm mt-2 md:text-md">I Like building Complex softwares.</p>
+              <p className="font-normal text-sm leading-normal md:text-md">I have an excellent problem solvings skills and i build softwares that solves real world problems. </p>
             </div>
             <div className="icons flex mt-5 ml-1 mb-4">
               {/* <FontAwesomeIcon className=" text-3xl" icon={faGithub}/> */}
