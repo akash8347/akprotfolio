@@ -19,7 +19,7 @@ const About = () => {
           <div className="flex justify-center items-center lg:pr-20  min-w-1/2 flex-1
          mx-auto">
 
-            <Image src="/logo.png" alt="Image of Me" width={600}
+            <Image src="/20240215_155825_0000.png" alt="Image of Me" width={600}
               height={50} className="w-72 h-72 lg:w-80
              lg:h-80  rounded-full shadow-lg "/>
 
