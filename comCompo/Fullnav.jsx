@@ -48,6 +48,9 @@ export default function Fullnav() {
                         <li  className={path=="/contact"?"   text-blue-800 dark:text-blue-800  bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
                             <Link href="/contact">Contact </Link>
                         </li>
+                        <li  className={path=="/blogeditor"?"   text-blue-800 dark:text-blue-800  bg-white py-1 px-2 rounded-sm ":"px-2 py-1"}>
+                            <Link href="/contact">blog editor </Link>
+                        </li>
                        
                     </div>
 
