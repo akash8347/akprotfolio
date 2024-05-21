@@ -139,6 +139,33 @@ export default function Mynav() {
                   </Link>
                 )}
               </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                       <Link href="/blogeditor">
+                  <button
+                    className={`${
+                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                    } group flex justify-center w-full items-center rounded-md px-2 py-2 text-sm`}
+                  >
+                    {/* {active ? (
+                      <DuplicateActiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <DuplicateInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )} */}
+                  blog editor
+                  </button>
+                  </Link>
+                )}
+              </Menu.Item>
+
+
+              
               
             </div>
            
