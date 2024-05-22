@@ -14,7 +14,7 @@ const Page = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("/api/blog/getposts",{ cache: 'no-store' }, {
+                const res = await fetch("/api/blog/getposts",{next: {revalidate: 30}}, {
                     method: 'GET',
                 });
 
