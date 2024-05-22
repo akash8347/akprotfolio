@@ -1,22 +1,14 @@
 import nodemailer from 'nodemailer'
-import connectDB from '@/app/lib/mongocon'
+
 import { resolve } from 'styled-jsx/css'
 const contact = require('@/app/lib/schemas/contact')
 export default async function handler(req, res) {
     const { mail, msg, name, subject } = req.body
     try {
-        await connectDB()
+        
 
-        console.log("req.body : "+req.body)
-        const test = new contact({
-            msg, name, mail, subject
-        })
-        const okay =await test.save();
-        console.log("contact data from database: "+okay)
-        if(!okay){
-            res.status(500).json({ massage: "contact form not submitted" })
-
-        }
+       
+       
         const trasporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
