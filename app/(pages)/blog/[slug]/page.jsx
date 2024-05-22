@@ -41,7 +41,7 @@ export default function Page({ params }) {
           <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3" src="/logo.png" alt="Profile Image" />
           <div>
             <h2 className="text-sm font-semibold">Akash Gohil</h2>
-            <p className="text-gray-500 text-xs">Published on Feb 06, 2023</p>
+            <p className="text-gray-500 text-xs">Published on may 20, 2024</p>
           </div>
         </div>
         
