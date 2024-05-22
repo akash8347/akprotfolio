@@ -6,8 +6,7 @@ const PostSchema = new Schema({
     content: String,
     
 },
-{ timestamps: true } 
-);
+{ timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
 

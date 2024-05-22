@@ -12,7 +12,7 @@ export default function Page({ params }) {
     const fetchPostData = async () => {
       try {
         const res = await fetch(`/api/blog/singlepost/${params.slug}`,{
-          cache: "force-cache"
+         next:{revalidate:60}
         });
         if (!res.ok) {
           throw new Error('Failed to fetch post data');
@@ -41,7 +41,18 @@ export default function Page({ params }) {
           <Image width={100} height={100} className="w-7 h-7 rounded-full mr-3" src="/logo.png" alt="Profile Image" />
           <div>
             <h2 className="text-sm font-semibold">Akash Gohil</h2>
-            <p className="text-gray-500 text-xs">Published on may 20, 2024</p>
+            {postData
+            ? 
+            (<>
+            <p className="text-gray-500 text-xs">Created at: {new Date(postData.createdAt).toLocaleString()}</p>
+            {/* {postData.updatedAt && <p>Updated at: {new Date(postData.updatedAt).toLocaleString()}</p>} */}
+             </>
+            )
+            :
+            ("nothing")
+            }
+            {/* <p className="text-gray-500 text-xs">Published on may 20, 2024</p> */}
+
           </div>
         </div>
         

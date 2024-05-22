@@ -8,6 +8,7 @@ var post=require('../../../lib/schemas/post')
 export async function GET(request) {
     try {
        await connectDB()
+       console.log('HIT GET ALL POST API')
         const posts = await post.find();
         revalidatePath("/blog");
         return Response.json(posts);
