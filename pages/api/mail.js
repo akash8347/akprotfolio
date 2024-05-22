@@ -33,7 +33,7 @@ export default async function handler(req, res) {
             from: 'akashgohil.av@gmail.com',
             to: "akashgohil.av@gmail.com",
             subject: 'New Message from Contact Form',
-            text: `Name: ${name}\nEmail: ${mail}\nSubject: ${subject}Message: ${msg}`,
+            text: `Name: ${name}\nEmail: ${mail}\nSubject: ${subject}\nMessage: ${msg}`,
         }
         // const done = await trasporter.sendMail(mailOptions);
             await new Promise((resolve,reject)=>{
