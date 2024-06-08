@@ -13,9 +13,7 @@ export default function Page({ params }) {
   useEffect(() => {
     const fetchPostData = async () => {
       try {
-        const res = await fetch(`/api/blog/singlepost/${params.slug}`, {
-          next: { revalidate: 60 }
-        });
+        const res = await fetch(`/api/blog/singlepost/${params.slug}`);
         if (!res.ok) {
           setError('Failed to fetch post data');
 
