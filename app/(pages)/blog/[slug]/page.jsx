@@ -8,7 +8,8 @@ import parse from 'html-react-parser';
 
 const fetchPostData = async (params) => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    // const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+   let baseUrl="https://akashgohil.vercel.app"
     const res = await fetch(`${baseUrl}/api/blog/singlepost/${params.slug}`);
     if (res.ok) {
       return await res.json();
