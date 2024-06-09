@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 />
 <link rel="icon" href="/logo.png" sizes="any" />
-      <body className={`${inter.className} relative bg-white dark:bg-gray-800 dark:text-white`}>
+      <body className={`${inter.className} antialiased relative bg-white dark:bg-gray-800 dark:text-white`}>
         <Providers>
           <NextTopLoader color="red" height={2} showSpinner={false} />
           <Fullnav />
