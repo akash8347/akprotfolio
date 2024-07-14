@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -14,8 +14,9 @@ const Page = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("/api/blog/getposts",{next: {revalidate: 60}}, {
+                const res = await fetch("/api/blog/getposts", { 
                     method: 'GET',
+                    next: { revalidate: 60 }
                 });
 
                 const testData = await res.json();
@@ -24,25 +25,23 @@ const Page = () => {
             } catch (error) {
                 console.log(error);
             } finally {
-                // Set loading to false after data is fetched
                 setLoading(false);
             }
         };
 
-        fetchData(); // Call the asynchronous function here
+        fetchData();
     }, []); 
 
     const handleClick = (title) => {
-        const truncatedTitle = title; // Adjust the number to your preference
-        const slug = truncatedTitle.replace(/\s+/g, '-');
-        router.push(`/blog/${slug}`);
+        const truncatedTitle = title.replace(/\s+/g, '-');
+        router.push(`/blog/${truncatedTitle}`);
     };
+
     function htmlToText(html) {
-        var temp = document.createElement("div");
+        const temp = document.createElement("div");
         temp.innerHTML = html;
         return temp.textContent || temp.innerText || "";
-      }
-      
+    }
 
     return (
         loading ? (
@@ -60,13 +59,12 @@ const Page = () => {
                 <div className="grid grid-cols-1 gap-9 md:grid-cols-1 lg:grid-cols-2 md:gap-4 w-full mx-auto ">
                     {test.map((test, index) => (
                         <div key={index} className="lg:max-w-xl max-w-lg hover:cursor-pointer " >
-                            {/* card start */}
                             <Link href={"blog/"+test.title.replace(/\s+/g, '-')}>
                             <div className="dark:bg-gray-900  mx-auto oversflow-hidden max-w-lg rounded-lg shadow-md border p-4">
                                 <div className='text-2xl mb-1 font-semibold truncate ...'>{test.title}</div>
-                                <div   className="text-gray-700 dark:text-gray-300 mb-4 ">{htmlToText(test.content.substring(0, 100)) + (test.content.length > 100 ? '...' : '') }</div>
+                                <div className="text-gray-700 dark:text-gray-300 mb-4 ">{htmlToText(test.content.substring(0, 100)) + (test.content.length > 100 ? '...' : '') }</div>
                                 <div className="flex justify-end">
-                                    <div  className="text-blue-500 font-semibold" onClick={() => handleClick(test.title)}>Read More</div>
+                                    <div className="text-blue-500 font-semibold" onClick={() => handleClick(test.title)}>Read More</div>
                                 </div>
                                 <hr className='h-5 mt-2 mb-1 py-0' />
                                 <div className="flex items-center mb-1">
@@ -78,7 +76,6 @@ const Page = () => {
                                 </div>
                             </div>
                             </Link>
-                            {/* card end */}
                         </div>
                     ))}
                 </div>
