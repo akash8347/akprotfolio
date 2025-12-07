@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
+
+const allowedEmails = ["akashgohil.av@gmail.com","aakash.gohil@njgroup.in"];
 const options = {
   providers: [
     GoogleProvider({
@@ -10,7 +12,8 @@ const options = {
   ],
    callbacks:{
     async signIn({profile}){
-      if (profile.email !== "akashgohil.av@gmail.com") {
+      
+      if (!allowedEmails.includes(profile.email)) {
         // Reject the login attempt
         return false
     }
