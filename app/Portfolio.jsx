@@ -7,6 +7,7 @@ import {
   FaArrowRight, 
   FaFileDownload 
 } from 'react-icons/fa';
+import Image from 'next/image';
 
 // 2. Import the X icon from 'fa6' (Font Awesome 6)
 import { FaXTwitter } from 'react-icons/fa6';
@@ -38,7 +39,7 @@ const Portfolio = () => {
             
             {/* The Image */}
             <div className="relative w-40 h-40 rounded-full p-[4px] bg-[#0a0a0a]">
-              <img 
+              <Image 
                 src="/akash_final.jpeg" 
                 alt="Aakash Gohil" 
                 className="w-full h-full rounded-full object-cover transition-all duration-500 ease-out"
