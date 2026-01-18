@@ -161,15 +161,20 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* 5. FOOTER / RESUME */}
-        <div className="mt-20 flex justify-center pb-10">
-           <button className="group relative px-8 py-3 rounded-full bg-white text-black font-bold tracking-wide overflow-hidden transition-all hover:w-[220px] w-[200px] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-300 via-transparent to-violet-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
-              <span className="relative flex items-center justify-center gap-2">
-                View Full Resume <FaFileDownload />
-              </span>
-           </button>
-        </div>
+{/* 5. FOOTER / RESUME */}
+<div className="mt-20 flex justify-center pb-10">
+  <a
+    href="/Aakash_Gohil_Resume.pdf"
+    download
+    className="group relative px-8 py-3 rounded-full bg-white text-black font-bold tracking-wide overflow-hidden transition-all hover:w-[220px] w-[200px] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+  >
+    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-300 via-transparent to-violet-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
+    <span className="relative flex items-center justify-center gap-2">
+      View Full Resume <FaFileDownload />
+    </span>
+  </a>
+</div>
+
 
       </div>
     </div>
