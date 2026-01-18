@@ -43,6 +43,8 @@ const Portfolio = () => {
                 src="/akash_final.jpeg" 
                 alt="Aakash Gohil" 
                 className="w-full h-full rounded-full object-cover transition-all duration-500 ease-out"
+                width={400}
+                height={400}
               />
             </div>
             
@@ -62,7 +64,7 @@ const Portfolio = () => {
         {/* 2. BIO & DESC */}
         <div className="mb-14 space-y-6">
           <p className="text-lg text-slate-400 leading-relaxed font-light">
-            I'm a <span className="text-white font-medium">full stack software engineer</span> based in India, with a passion for building scalable applications and solving complex problems. By day, I build robust web solutions that can handle anything the internet throws at them. By night, I'm a digital explorer, crafting side projects and chasing new tech trends.
+            I&apos;m a <span className="text-white font-medium">full stack software engineer</span> based in India, with a passion for building scalable applications and solving complex problems. By day, I build robust web solutions that can handle anything the internet throws at them. By night, I'm a digital explorer, crafting side projects and chasing new tech trends.
           </p>
           
           {/* The "Joke Algorithm" - Styled as a code block/comment */}
