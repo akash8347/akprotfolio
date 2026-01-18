@@ -72,7 +72,7 @@ const Portfolio = () => {
              <div className="absolute inset-0 bg-violet-500/5 group-hover:bg-violet-500/10 transition-colors"></div>
              <p className="relative z-10 text-slate-300 font-mono text-sm">
                {/* <span className="text-violet-400 opacity-70">// Fun Fact</span><br/> */}
-               When I'm not busy deploying or debugging, you might find me trying to optimize my joke algorithm, it&apos;s still running with <span className="text-emerald-400 font-bold">O(n!)</span> complexity, but I&apos;m working on it!
+               When I&apos;m not busy deploying or debugging, you might find me trying to optimize my joke algorithm, it&apos;s still running with <span className="text-emerald-400 font-bold">O(n!)</span> complexity, but I&apos;m working on it!
              </p>
           </div>
         </div>
