@@ -164,7 +164,7 @@ const Portfolio = () => {
 {/* 5. FOOTER / RESUME */}
 <div className="mt-20 flex justify-center pb-10">
   <a
-    href="/Aakash_Gohil_Resume.pdf"
+    href="/akash_resume.pdf"
     download
     className="group relative px-8 py-3 rounded-full bg-white text-black font-bold tracking-wide overflow-hidden transition-all hover:w-[220px] w-[200px] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
   >
