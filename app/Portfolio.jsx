@@ -14,7 +14,8 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-emerald-500/30 overflow-hidden relative flex justify-center py-20 px-4">
+    // UPDATED: Changed py-20 to "pt-20 pb-32 sm:pb-20" to prevent content being hidden behind the floating bar on mobile
+    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-emerald-500/30 overflow-hidden relative flex justify-center pt-20 pb-32 sm:pb-20 px-4">
       
       {/* --- BACKGROUND ATMOSPHERE (The "Eye Satisfying" Glow) --- */}
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -30,7 +31,7 @@ const Portfolio = () => {
       <div className="relative z-10 w-full max-w-[600px] animate-fade-in-up">
         
         {/* 1. HERO SECTION */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-10">
           
           {/* Unique Profile Image Housing */}
           <div className="relative group mb-8">
@@ -52,7 +53,7 @@ const Portfolio = () => {
             <div className="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-4 border-[#0a0a0a] rounded-full" title="Available for work"></div>
           </div>
 
-          <h1 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-3">
+          <h1 className="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-3">
             Aakash Gohil
           </h1>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
@@ -77,13 +78,19 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* 3. SOCIAL DOCK */}
-        <div className="flex justify-center mb-16">
-          <div className="flex items-center gap-4 px-6 py-3 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl shadow-2xl">
+        {/* 3. SOCIAL DOCK (UPDATED FOR MOBILE FIXED POSITION) */}
+        {/* On Mobile: It gets taken out of flow (fixed). On Desktop (sm): It has margin-bottom (mb-16) to push content down. */}
+        <div className="flex justify-center sm:mb-16">
+          <div className="
+            fixed bottom-6 left-1/2 -translate-x-1/2 z-50              /* Mobile: Fixed at bottom, centered, high z-index */
+            sm:static sm:translate-x-0 sm:z-auto                       /* Desktop: Static position, reset transform */
+            flex items-center gap-4 px-6 py-3 
+            bg-[#111]/80 border border-white/10 rounded-2xl backdrop-blur-xl shadow-2xl /* Added darker bg opacity for better floating contrast */
+          ">
             {[
               { Icon: FaGithub, href: "https://github.com/akash8347", color: "hover:text-white" },
               { Icon: FaLinkedinIn, href: "https://www.linkedin.com/in/akash-gohil-196879229/", color: "hover:text-blue-400" },
-              { Icon: FaXTwitter, href: "https://x.com", color: "hover:text-white" }, // Updated color for X
+              { Icon: FaXTwitter, href: "https://x.com/AkashGo78079610", color: "hover:text-white" },
               { Icon: FaEnvelope, href: "mailto:akashgohil.av@gmail.com", color: "hover:text-emerald-400" }
             ].map((social, idx) => (
               <a 
