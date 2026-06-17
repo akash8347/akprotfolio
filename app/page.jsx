@@ -69,11 +69,14 @@ const handlex=()=>{
 
   return (
 
-    <div className=" ">
-      <main className="HERO  flex w-11/12 md:w-10/12 mx-auto min-h-screen mt-5 md:mt-20
-     bg-white dark:bg-gray-800 flex-col  md:flex-row md:min-h-[500px]">
+    <div className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.18),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(168,85,247,0.16),_transparent_32%),linear-gradient(to_bottom,_rgba(248,250,252,0.85),_transparent)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(168,85,247,0.14),_transparent_32%),linear-gradient(to_bottom,_rgba(15,23,42,0.92),_transparent)]" />
+      <main className="HERO relative flex w-11/12 md:w-10/12 mx-auto min-h-screen mt-5 md:mt-20 flex-col md:flex-row md:min-h-[500px] rounded-[2rem] border border-slate-200/70 bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-slate-700/60 dark:bg-slate-900/80">
         <div className="left dark:bg-gray-800  flex-1  md:w-11/12 w-full md:flex-1 mb-5 lg:mb-0 lg:mx-10 lg:mt-10  ">
           <div className=" content flex flex-col mt-16 md:mt-1  ">
+            <div className="mb-5 inline-flex w-fit items-center rounded-full border border-purple-200/70 bg-purple-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-purple-700 shadow-sm dark:border-purple-400/30 dark:bg-purple-500/10 dark:text-purple-300">
+              Portfolio 2026
+            </div>
             <div className="name text-2xl  font-semibold lg:text-4xl   md:text-3xl transition ease-in-out duration-300">
               Hey, I&apos;m Akash Gohil
             </div>
@@ -91,22 +94,20 @@ const handlex=()=>{
               }} />
             </div>
             <div className="button">
-
-              <button type="button" className="text-purple-700 hover:text-white
-                border border-purple-700 hover:bg-purple-800 focus:ring-4
-                focus:outline-none focus:ring-purple-300 font-medium 
-                rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
-                 dark:border-purple-400 dark:text-purple-400
-                   dark:hover:text-white
-               dark:hover:bg-purple-500 dark:focus:ring-purple-900 shadow-2xl
-               transiction duration-300 ease-in-out mt-3
-               "  onClick={()=>router.push('/projects')}>Explore my projects</button>
+              <div className="flex flex-wrap gap-3">
+                <button type="button" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-2xl transition duration-300 ease-in-out mt-3 dark:bg-purple-500 dark:hover:bg-purple-400 dark:focus:ring-purple-900" onClick={()=>router.push('/projects')}>Explore my projects</button>
+                <Link href="#contact" className="mt-3 inline-flex items-center rounded-lg border border-slate-300 bg-white/80 px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-900">
+                  Contact me
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="right    flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-15 py-0 ">
-          <Image src="/download.svg" alt="akash" width={50} height={50} className="w-7/12 md:w-9/12 mx-auto" />
+        <div className="right flex-1 lg:mr-0 md:flex-1 lg:mx-10 lg:px-15 py-0 flex items-center justify-center">
+          <div className="rounded-[2rem] bg-gradient-to-br from-purple-50 via-white to-indigo-50 p-4 shadow-inner dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
+            <Image src="/download.svg" alt="akash" width={50} height={50} className="w-7/12 md:w-9/12 mx-auto drop-shadow-2xl" />
+          </div>
         </div>
       </main>
 
