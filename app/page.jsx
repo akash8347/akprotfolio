@@ -26,6 +26,11 @@ import {useRouter} from "next/navigation";
 
 export default function Home() {
   const router=useRouter()
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const el = document.getElementById('contact');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [subject, setSubject] = useState('');
@@ -85,10 +90,10 @@ const handlex=()=>{
               <p className="font-normal text-sm mt-2 md:text-md">I Like building Complex softwares.</p>
               <p className="font-normal text-sm leading-normal md:text-md">I have an excellent problem solvings skills and i build softwares that solves real world problems. </p>
             </div>
-            <div className="icons flex mt-5 ml-1 mb-4">
+              <div className="icons flex mt-5 ml-1 mb-4">
               {/* <FontAwesomeIcon className=" text-3xl" icon={faGithub}/> */}
-              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')} className="text-3xl mr-3 cursor-pointer" />
-              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className="cursor-pointer mx-3" style={{
+              <FaEnvelopeOpenText onClick={()=>window.open('mailto:akashgohil.av@gmail.com')} className="text-3xl mr-3 cursor-pointer transition-transform hover:scale-110" />
+              <FaLinkedin onClick={()=>router.push("https://www.linkedin.com/in/akash-gohil-196879229/")} className="cursor-pointer mx-3 transition-transform hover:scale-110" style={{
                 fontSize: "2.050rem",
                 lineHeight: "2.25rem",
               }} />
@@ -96,9 +101,9 @@ const handlex=()=>{
             <div className="button">
               <div className="flex flex-wrap gap-3">
                 <button type="button" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-2xl transition duration-300 ease-in-out mt-3 dark:bg-purple-500 dark:hover:bg-purple-400 dark:focus:ring-purple-900" onClick={()=>router.push('/projects')}>Explore my projects</button>
-                <Link href="#contact" className="mt-3 inline-flex items-center rounded-lg border border-slate-300 bg-white/80 px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-900">
+                <a href="#contact" onClick={scrollToContact} className="mt-3 inline-flex items-center rounded-lg border border-slate-300 bg-white/80 px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-white dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-900">
                   Contact me
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -167,7 +172,7 @@ const handlex=()=>{
         lg:flex-wrap justify-center  flex-wrap">
           {data.map((card) => (
 
-            <div key={card.id} className="lg:w-[36%] lg:max-w-xl mx-auto lg:mx-auto">  {/* mx-3 */}
+            <div key={card.id} className="lg:w-[36%] lg:max-w-xl mx-auto lg:mx-auto transform transition-transform duration-300 hover:scale-105">  {/* mx-3 */}
 
               <Cards data={card} />
 
@@ -274,7 +279,7 @@ const handlex=()=>{
                 </div>
                 <div>
                   <button
-                    className="hover:shadow-form rounded-md bg-[#6A64F1] py-2 px-5 text-base font-semibold text-white outline-none"
+                    className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 transition transform hover:-translate-y-0.5 shadow-lg px-6 py-2 text-base font-semibold text-white outline-none"
                  type="submit" >
                     {
                       pend ? (<Spinner1 />) : ("submit") 
